@@ -1,0 +1,46 @@
+{
+    "name": "patrickzuurbier/formserver",
+    "description": "Deliver forms via REST api and save submitted data to a database.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PatrickZuurbier\\FormServer\\": "src/",
+            "PatrickZuurbier\\FormServer\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PatrickZuurbier\\FormServer\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Patrick Zuurbier"
+        }
+    ],
+    "homepage": "https://github.com/patrickzuurbier/formserver",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.1",
+        "spatie/laravel-translatable": "^6.5",
+        "bensampo/laravel-enum": "^6.7"
+    },
+    "require-dev": {
+        "larastan/larastan": "^1.0 || ^2.0",
+        "orchestra/testbench": "^6.23 || ^7.0 || ^8.0",
+        "phpstan/phpstan-mockery": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "laravel/pint": "^1.13"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PatrickZuurbier\\FormServer\\Providers\\FormServerServiceProvider"
+            ]
+        }
+    }
+}
