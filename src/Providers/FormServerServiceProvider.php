@@ -6,6 +6,7 @@ namespace PatrickZuurbier\FormServer\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use PatrickZuurbier\FormServer\Console\Commands\CreateFormCommand;
+use PatrickZuurbier\FormServer\Console\Commands\CreateFormFieldCommand;
 use PatrickZuurbier\FormServer\Contracts\Generators\ClassGeneratorInterface;
 use PatrickZuurbier\FormServer\Contracts\Resolvers\ClassResolverInterface;
 use PatrickZuurbier\FormServer\Contracts\Resolvers\StubsPathResolverInterface;
@@ -28,6 +29,7 @@ class FormServerServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 CreateFormCommand::class,
+                CreateFormFieldCommand::class,
             ]);
         }
 

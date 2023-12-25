@@ -1,0 +1,17 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+class {{ class }}
+{
+    protected string $name = '{{ name }}';
+    protected string $inputId = '';
+    protected string $type = '';
+    protected string $label = '';
+    protected string $placeholder = '';
+    protected string $help = '';
+    protected string $rules = '';
+    protected int $position = 0;
+}
